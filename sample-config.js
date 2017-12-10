@@ -32,6 +32,7 @@
                 {"id": "RIM",  "message": "Rörelse i matrummet."},
                 {"id": "TT",   "message": "Terassen tänd."},
                 {"id": "TS",   "message": "Terassen släckt."},
+                {"id": "DRPD", "message": "Det ringer på dörren."}
 
             ]
         }
