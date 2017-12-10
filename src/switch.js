@@ -5,6 +5,8 @@ var Timer = require('./timer.js');
 module.exports = class Switch {
 
     constructor(platform, config) {
+
+
         this.log = platform.log;
         this.config = config;
         this.homebridge = platform.homebridge;
@@ -12,6 +14,8 @@ module.exports = class Switch {
         this.Service = platform.homebridge.hap.Service;
         this.name = config.message;
         this.service = new this.Service.Switch(this.name);
+
+        this.log('New message:', this.name);
 
         var characteristic = this.service.getCharacteristic(this.Characteristic.On);
         var state = false;
@@ -25,6 +29,8 @@ module.exports = class Switch {
 
             if (value) {
                 timer.cancel();
+
+                characteristic.updateValue(true);
 
                 platform.pushover(this.name);
 
