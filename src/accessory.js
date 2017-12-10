@@ -20,13 +20,13 @@ module.exports = class Accessory {
         var service = new this.Service.AccessoryInformation();
 
         if (this.config.manufacturer)
-            accessoryInfo.setCharacteristic(this.Characteristic.Manufacturer, this.config.manufacturer);
+            service.setCharacteristic(this.Characteristic.Manufacturer, this.config.manufacturer);
 
         if (this.config.model)
-            accessoryInfo.setCharacteristic(this.Characteristic.Model, this.config.model);
+            service.setCharacteristic(this.Characteristic.Model, this.config.model);
 
         if (this.config.serialNumber)
-            accessoryInfo.setCharacteristic(this.Characteristic.SerialNumber, this.config.serialNumber);
+            service.setCharacteristic(this.Characteristic.SerialNumber, this.config.serialNumber);
 
         return [service];
     }
