@@ -23,7 +23,7 @@ module.exports = class Switch extends Accessory {
         characteristic.on('set', (value, callback, context) => {
 
             if (value) {
-                characteristic.setValue(state = true);
+                characteristic.updateValue(state = true);
 
                 if (this.platform.enabled || this.config.priority == 'high') {
                     platform.pushover(this.message).then(() => {
@@ -33,13 +33,13 @@ module.exports = class Switch extends Accessory {
                         this.log(error);
                     })
                     .then(() => {
-                        characteristic.setValue(state = false);
+                        characteristic.updateValue(state = false);
                     });
 
                 }
                 else {
                     setTimeout(() => {
-                        characteristic.setValue(state = false);
+                        characteristic.updateValue(state = false);
                     }, 500);
                 }
 
