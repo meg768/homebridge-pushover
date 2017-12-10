@@ -33,8 +33,8 @@
                 {"id": "TT",   "message": "Terassen tänd."},
                 {"id": "TS",   "message": "Terassen släckt."},
                 {"id": "DRPD", "message": "Det ringer på dörren."},
-                {"id": "JALH", "message": "Jag har lämnat huset."},
-                {"id": "JHKH", "message": "Jag är hemma!"}
+                {"id": "JALH", "message": "Jag har lämnat huset.", "priority":"high"},
+                {"id": "JHKH", "message": "Jag är hemma!", "priority":"high"}
             ]
 
         }
