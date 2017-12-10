@@ -15,7 +15,7 @@
 
             "pushover": {
                 "user": "u1mrd1fpevhm8opcbhywcmmdst7qja",
-                "token" "amctdgksyefuqxavyuttsh2pcg4ejp"
+                "token": "amctdgksyefuqxavyuttsh2pcg4ejp"
             },
 
             "messages": [
