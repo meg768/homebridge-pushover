@@ -18,9 +18,13 @@
                 "token": "amctdgksyefuqxavyuttsh2pcg4ejp"
             },
 
-            "messages": [
-                {"id": "ON",   "message": "Larm aktiverat." },
-                {"id": "OFF",  "message": "Larm avaktiverat." },
+            "masterSwitch": {
+                "name": "Meddelande"
+            },
+
+            "switches": [
+                {"id": "LA",   "message": "Larm aktiverat." },
+                {"id": "LV",   "message": "Larm avaktiverat." },
                 {"id": "RIB",  "message": "Rörelse i biorummet." },
                 {"id": "RPK",  "message": "Rörelse på kontoret." },
                 {"id": "RIV",  "message": "Rörelse i vardagsrummet."}
