@@ -4,9 +4,9 @@ var Accessory = require('./accessory.js')
 
 module.exports = class MasterSwitch extends Accessory {
 
-    constructor(platform) {
+    constructor(platform, config) {
 
-        config = Object.assign({}, {name:'Pushover', model:'Pushover', manufacturer:'Pushover', serialNumber:'MasterSwitch'});
+        config = Object.assign({}, {name:'Pushover', model:'Pushover Master Switch', manufacturer:'Pushover', serialNumber:'MasterSwitch'}, config);
 
         super(platform, config);
 

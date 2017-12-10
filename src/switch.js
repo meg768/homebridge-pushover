@@ -7,7 +7,7 @@ module.exports = class Switch extends Accessory {
 
     constructor(platform, config) {
 
-        config = Object.assign({}, {name:config.message, model:'Pushover', manufacturer:'Pushover', serialNumber:config.id}, config);
+        config = Object.assign({}, {name:config.message, model:'Pushover Message', manufacturer:'Pushover', serialNumber:config.id}, config);
 
         super(platform, config);
 
@@ -28,7 +28,6 @@ module.exports = class Switch extends Accessory {
                 timer.cancel();
 
                 characteristic.updateValue(true);
-
                 platform.pushover(this.name);
 
                 timer.setTimer(2000, () => {

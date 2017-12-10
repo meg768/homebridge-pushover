@@ -3,6 +3,9 @@
 module.exports = class Accessory {
 
     constructor(platform, config) {
+        if (!config.name)
+            throw new Error('An accessory name must be specified');
+
         this.log = platform.log;
         this.config = config;
         this.homebridge = platform.homebridge;
