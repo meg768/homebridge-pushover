@@ -19,14 +19,11 @@
             },
 
             "messages": [
-                {
-                    "id": "LA",
-                    "message": "Larm aktiverat."
-                },
-                {
-                    "id": "RIB",
-                    "message": "Rörelse i biorummet."
-                }
+                {"id": "ON",   "message": "Larm aktiverat." },
+                {"id": "OFF",  "message": "Larm avaktiverat." },
+                {"id": "RIB",  "message": "Rörelse i biorummet." },
+                {"id": "RPK",  "message": "Rörelse på kontoret." },
+                {"id": "RIV",  "message": "Rörelse i vardagsrummet."}
 
             ]
         }

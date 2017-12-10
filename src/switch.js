@@ -1,21 +1,18 @@
 "use strict";
 
+var Accessory = require('./accessory.js')
 var Timer = require('./timer.js');
 
-module.exports = class Switch {
+module.exports = class Switch extends Accessory {
 
     constructor(platform, config) {
 
+        config = Object.assign({}, {name:config.message, model:'Pushover', manufacturer:'Pushover', serialNumber:config.id}, config);
 
-        this.log = platform.log;
-        this.config = config;
-        this.homebridge = platform.homebridge;
-        this.Characteristic = platform.homebridge.hap.Characteristic;
-        this.Service = platform.homebridge.hap.Service;
-        this.name = config.message;
-        this.service = new this.Service.Switch(this.name);
+        super(platform, config);
 
         this.log('New message:', this.name);
+        this.service = new this.Service.Switch(this.name);
 
         var characteristic = this.service.getCharacteristic(this.Characteristic.On);
         var state = false;
@@ -49,13 +46,9 @@ module.exports = class Switch {
 
 
     getServices() {
-        var accessoryInfo = new this.Service.AccessoryInformation();
-
-        accessoryInfo.setCharacteristic(this.Characteristic.Manufacturer, 'Pushover');
-        accessoryInfo.setCharacteristic(this.Characteristic.Model, 'Pushover 1.0');
-        accessoryInfo.setCharacteristic(this.Characteristic.SerialNumber, this.config.id);
-
-        return [accessoryInfo, this.service];
+        var services = super.getServices();
+        services.push(this.service);
+        return services;
     }
 
 };
