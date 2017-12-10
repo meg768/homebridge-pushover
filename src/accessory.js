@@ -7,6 +7,7 @@ module.exports = class Accessory {
             throw new Error('An accessory name must be specified');
 
         this.log = platform.log;
+        this.platform = platform;
         this.config = config;
         this.homebridge = platform.homebridge;
         this.Characteristic = platform.homebridge.hap.Characteristic;
