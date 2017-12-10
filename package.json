@@ -1,0 +1,31 @@
+{
+  "name": "homebridge-pushover",
+  "version": "1.0.0",
+  "description": "Send messages via Pushover from HomeKit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "homebrige",
+    "pushover",
+    "homebridge-plugin"
+  ],
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meg768/homebridge-pushover.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meg768/homebridge-pushover/issues"
+  },
+  "homepage": "https://github.com/meg768/homebridge-pushover#readme",
+  "dependencies": {
+    "pushover-notifications": "^0.2.4"
+  }
+}
