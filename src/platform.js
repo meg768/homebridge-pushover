@@ -28,7 +28,7 @@ module.exports = class Platform {
 
         var accessories = [];
 
-        config.messages.forEach((item) => {
+        this.config.messages.forEach((item) => {
             accessories.push(new Switch(this, config));
         });
 
