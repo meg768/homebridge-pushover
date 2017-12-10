@@ -23,11 +23,13 @@
             },
 
             "switches": [
-                {"id": "LA",   "message": "Larm aktiverat." },
-                {"id": "LV",   "message": "Larm avaktiverat." },
+                {"id": "LA",   "message": "Larm aktiverat.", "priority":"high" },
+                {"id": "LV",   "message": "Larm avaktiverat.", "priority":"high" },
                 {"id": "RIB",  "message": "Rörelse i biorummet." },
                 {"id": "RPK",  "message": "Rörelse på kontoret." },
-                {"id": "RIV",  "message": "Rörelse i vardagsrummet."}
+                {"id": "RIV",  "message": "Rörelse i vardagsrummet."},
+                {"id": "TT",   "message": "Terassen tänd."},
+                {"id": "TS",   "message": "Terassen släckt."},
 
             ]
         }

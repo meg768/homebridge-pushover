@@ -16,31 +16,25 @@ module.exports = class Platform {
     pushover(message) {
         return new Promise((resolve, reject) => {
             try {
-                if (this.enabled) {
-                    if (!this.config.pushover)
-                        throw new Error('You must configure Pushover credentials.');
+                if (!this.config.pushover)
+                    throw new Error('You must configure Pushover credentials.');
 
-                    if (!this.config.pushover.user)
-                        throw new Error('You must configure Pushover user.');
+                if (!this.config.pushover.user)
+                    throw new Error('You must configure Pushover user.');
 
-                    if (!this.config.pushover.token)
-                        throw new Error('You must configure Pushover token.');
+                if (!this.config.pushover.token)
+                    throw new Error('You must configure Pushover token.');
 
-                    var push = new Pushover(this.config.pushover);
+                var push = new Pushover(this.config.pushover);
 
-                    this.log('Sending message:', message);
+                this.log('Sending message:', message);
 
-                    push.send({priority:0, message:message}, (error, result) => {
-                        if (error)
-                            reject(error);
-                        else
-                            resolve();
-                    });
-                }
-                else {
-                    resolve();
-                }
-
+                push.send({priority:0, message:message}, (error, result) => {
+                    if (error)
+                        reject(error);
+                    else
+                        resolve();
+                });
             }
             catch (error) {
                 reject(error);

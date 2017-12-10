@@ -11,6 +11,7 @@ module.exports = class Switch extends Accessory {
         super(platform, config);
 
         this.service = new this.Service.Switch(this.name);
+        this.message = this.name;
 
         var characteristic = this.service.getCharacteristic(this.Characteristic.On);
 
@@ -23,14 +24,24 @@ module.exports = class Switch extends Accessory {
             if (value) {
                 characteristic.updateValue(true);
 
-                platform.pushover(this.name).then(() => {
-                })
-                .catch((error) => {
-                    this.log(error);
-                })
-                .then(() => {
-                    characteristic.updateValue(false);
-                });
+                if (this.platform.enabled || this.config.priority == 'high') {
+                    platform.pushover(this.message).then(() => {
+                        this.log('Message sent:', this.message);
+                    })
+                    .catch((error) => {
+                        this.log(error);
+                    })
+                    .then(() => {
+                        characteristic.updateValue(false);
+                    });
+
+                }
+                else {
+                    setTimeout(() => {
+                        characteristic.updateValue(false);
+                    }, 500);
+                }
+
             }
 
             callback();
