@@ -12,7 +12,7 @@ module.exports = class Platform {
     }
 
     pushover(message) {
-        var push = new Pushover(config.pushover);
+        var push = new Pushover(this.config.pushover);
 
         this.log('Sending message:', message);
 
