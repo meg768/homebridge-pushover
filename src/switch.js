@@ -14,15 +14,16 @@ module.exports = class Switch extends Accessory {
         this.message = this.name;
 
         var characteristic = this.service.getCharacteristic(this.Characteristic.On);
+        var state = false;
 
         characteristic.on('get', (callback) => {
-            callback(null, false);
+            callback(null, state);
         });
 
         characteristic.on('set', (value, callback, context) => {
 
             if (value) {
-                characteristic.setValue(true);
+                characteristic.setValue(state = true);
 
                 if (this.platform.enabled || this.config.priority == 'high') {
                     platform.pushover(this.message).then(() => {
@@ -32,13 +33,13 @@ module.exports = class Switch extends Accessory {
                         this.log(error);
                     })
                     .then(() => {
-                        characteristic.setValue(false);
+                        characteristic.setValue(state = false);
                     });
 
                 }
                 else {
                     setTimeout(() => {
-                        characteristic.setValue(false);
+                        characteristic.setValue(state = false);
                     }, 500);
                 }
 
