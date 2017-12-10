@@ -32,7 +32,7 @@
                 {"id": "RIM",  "message": "Rörelse i matrummet."},
                 {"id": "TT",   "message": "Terassen tänd."},
                 {"id": "TS",   "message": "Terassen släckt."},
-                {"id": "DRPD", "message": "Det ringer på dörren."},
+                {"id": "DRPD", "message": "Det ringer på dörren.", "priority":"high"},
                 {"id": "JALH", "message": "Jag har lämnat huset.", "priority":"high"},
                 {"id": "JHKH", "message": "Jag är hemma!", "priority":"high"}
             ]
