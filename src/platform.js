@@ -29,7 +29,7 @@ module.exports = class Platform {
         var accessories = [];
 
         this.config.messages.forEach((item) => {
-            accessories.push(new Switch(this, config));
+            accessories.push(new Switch(this, item));
         });
 
         callback(accessories);
