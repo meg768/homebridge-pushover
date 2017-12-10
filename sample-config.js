@@ -19,7 +19,7 @@
             },
 
             "masterSwitch": {
-                "name": "Meddelande"
+                "name": "Pushover"
             },
 
             "switches": [
@@ -28,6 +28,8 @@
                 {"id": "RIB",  "message": "Rörelse i biorummet." },
                 {"id": "RPK",  "message": "Rörelse på kontoret." },
                 {"id": "RIV",  "message": "Rörelse i vardagsrummet."},
+                {"id": "RIS",  "message": "Rörelse i snickarrummet."},
+                {"id": "RIM",  "message": "Rörelse i matrummet."},
                 {"id": "TT",   "message": "Terassen tänd."},
                 {"id": "TS",   "message": "Terassen släckt."},
 
