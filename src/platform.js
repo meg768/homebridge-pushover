@@ -14,7 +14,7 @@ module.exports = class Platform {
     }
 
     pushover(message) {
-        return new new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             try {
                 if (this.enabled) {
                     if (!this.config.pushover)
