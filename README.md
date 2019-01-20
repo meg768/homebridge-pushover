@@ -65,7 +65,7 @@ Configure your **~/.homebridge/config.json** with the following platform.
 ## What This Plugin Does
 
 This plugin simply creates buttons with text labels. When pushed to state ON
-a message is sent using Pushover using the specified Pushover credentials.
+a message is sent using Pushover with the specified Pushover credentials.
 
 The **masterSwitch** will create a button that is used to toggle
 messages on or off. However, when a switch has the priority **high**, the message is always sent.

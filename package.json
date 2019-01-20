@@ -1,12 +1,12 @@
 {
   "name": "homebridge-pushover",
-  "version": "1.0.0",
-  "description": "Send messages via Pushover from HomeKit",
+  "version": "1.0.1",
+  "description": "Send messages via Pushover to HomeKit",
   "main": "index.js",
   "scripts": {
     "commit": "git add -A && git commit -m '-' && git push",
-		"goto-github": "open https://github.com/meg768/homebridge-pushover",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "goto-github": "open https://github.com/meg768/homebridge-pushover",
+		"goto-npm": "open https://www.npmjs.com/package/homebridge-pushover"
   },
   "keywords": [
     "homebrige",

@@ -12,6 +12,11 @@
             "type": "npm",
             "script": "goto-github",
             "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "goto-npm",
+            "problemMatcher": []
         }
     ]
 }
