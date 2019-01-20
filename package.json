@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "commit": "git add -A && git commit -m '-' && git push",
+		"goto-github": "open https://github.com/meg768/homebridge-pushover",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

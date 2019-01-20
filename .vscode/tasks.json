@@ -7,6 +7,11 @@
             "type": "npm",
             "script": "commit",
             "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "goto-github",
+            "problemMatcher": []
         }
     ]
 }
