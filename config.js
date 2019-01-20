@@ -19,7 +19,7 @@
             },
 
             "masterSwitch": {
-                "name": "Pushover"
+                "name": "Meddelande"
             },
 
             "switches": [
