@@ -42,18 +42,18 @@ Configure your **~/.homebridge/config.json** with the following platform.
             },
 
             "switches": [
-                {"message": "Larm aktiverat", "priority":"high" },
-                {"message": "Larm avaktiverat", "priority":"high" },
-                {"message": "Rörelse i biorummet" },
-                {"message": "Rörelse på kontoret" },
-                {"message": "Rörelse i vardagsrummet"},
-                {"message": "Rörelse i snickarrummet"},
-                {"message": "Rörelse i matrummet"},
-                {"message": "Terassen tänd"},
-                {"message": "Terassen släckt"},
-                {"message": "Det ringer på dörren", "priority":"high"},
-                {"message": "Jag har lämnat huset", "priority":"high"},
-                {"message": "Jag är hemma!", "priority":"high"}
+                {"name": "Larm aktiverat", "priority":"high" },
+                {"name": "Larm avaktiverat", "priority":"high" },
+                {"name": "Rörelse i biorummet" },
+                {"name": "Rörelse på kontoret" },
+                {"name": "Rörelse i vardagsrummet"},
+                {"name": "Rörelse i snickarrummet"},
+                {"name": "Rörelse i matrummet"},
+                {"name": "Terassen tänd"},
+                {"name": "Terassen släckt"},
+                {"name": "Det ringer på dörren", "priority":"high"},
+                {"name": "Jag har lämnat huset", "priority":"high"},
+                {"name": "Jag är hemma!", "priority":"high"}
             ]
 
         }
@@ -64,11 +64,14 @@ Configure your **~/.homebridge/config.json** with the following platform.
 ## What This Plugin Does
 
 This plugin simply creates buttons with text labels. When pushed to state ON
-a message is sent using Pushover.
+a message is sent using Pushover using the specified Pushover credentials.
+
+The **masterSwitch** will create a button that is used to toggle
+messages on or off, except when a switch is set to priority **high**.
 
 ## Bugfixes/Updates
 
-* 2019-01-20 - JUst published on NPM.
+* 2019-01-20 - Just published on NPM.
 
 ## Useful Links
 

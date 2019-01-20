@@ -23,18 +23,18 @@
             },
 
             "switches": [
-                {"message": "Larm aktiverat", "priority":"high" },
-                {"message": "Larm avaktiverat", "priority":"high" },
-                {"message": "Rörelse i biorummet" },
-                {"message": "Rörelse på kontoret" },
-                {"message": "Rörelse i vardagsrummet"},
-                {"message": "Rörelse i snickarrummet"},
-                {"message": "Rörelse i matrummet"},
-                {"message": "Terassen tänd"},
-                {"message": "Terassen släckt"},
-                {"message": "Det ringer på dörren", "priority":"high"},
-                {"message": "Jag har lämnat huset", "priority":"high"},
-                {"message": "Jag är hemma!", "priority":"high"}
+                {"name": "Larm aktiverat", "priority":"high" },
+                {"name": "Larm avaktiverat", "priority":"high" },
+                {"name": "Rörelse i biorummet" },
+                {"name": "Rörelse på kontoret" },
+                {"name": "Rörelse i vardagsrummet"},
+                {"name": "Rörelse i snickarrummet"},
+                {"name": "Rörelse i matrummet"},
+                {"name": "Terassen tänd"},
+                {"name": "Terassen släckt"},
+                {"name": "Det ringer på dörren", "priority":"high"},
+                {"name": "Jag har lämnat huset", "priority":"high"},
+                {"name": "Jag är hemma!", "priority":"high"}
             ]
 
         }
