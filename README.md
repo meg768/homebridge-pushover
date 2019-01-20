@@ -68,7 +68,7 @@ a message is sent using Pushover.
 
 ## Bugfixes/Updates
 
-* -
+* 2019-01-20 - JUst published on NPM.
 
 ## Useful Links
 
