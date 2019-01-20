@@ -1,7 +1,7 @@
 # homebridge-pushover
 
-Sends messages via Pushover from HomeKit. Can be used in automation 
-so that you may be alerted when things happend in your Home app.
+Sends messages via Pushover from HomeKit. Can be used in HomeKit automation 
+so that you may be alerted when things happend in your home.
 
 ## Installation
 
