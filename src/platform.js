@@ -11,6 +11,16 @@ module.exports = class Platform {
         this.log = log;
         this.homebridge = homebridge;
         this.enabled = true;
+
+        if (process.env.PUSHOVER_USER && process.env.PUSHOVER_TOKEN) {
+            this.log('Using Pushover credentials from .env');
+
+            config.pushover = {
+                user: process.env.PUSHOVER_USER,
+                token: process.env.PUSHOVER_TOKEN
+            };
+        }
+
     }
 
     pushover(message) {

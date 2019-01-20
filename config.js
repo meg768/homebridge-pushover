@@ -1,7 +1,7 @@
 {
     "bridge": {
         "name": "Pushover",
-        "username": "CC:22:3D:E3:CE:37",
+        "username": "CC:22:3D:F3:CE:37",
         "port": 51826,
         "pin": "031-45-154"
     },

@@ -4,6 +4,7 @@
   "description": "Send messages via Pushover from HomeKit",
   "main": "index.js",
   "scripts": {
+    "commit": "git add -A && git commit -m '-' && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/meg768/homebridge-pushover#readme",
   "dependencies": {
+    "dotenv": "^6.2.0",
     "pushover-notifications": "^0.2.4"
   }
 }
