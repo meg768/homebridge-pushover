@@ -68,7 +68,7 @@ This plugin simply creates buttons with text labels. When pushed to state ON
 a message is sent using Pushover using the specified Pushover credentials.
 
 The **masterSwitch** will create a button that is used to toggle
-messages on or off, except when a switch is set to priority **high**.
+messages on or off. However, when a switch has the priority **high**, the message is always sent.
 
 ## Bugfixes/Updates
 
