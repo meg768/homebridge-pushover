@@ -14,8 +14,8 @@
             "name": "Pushover",
 
             "pushover": {
-                "user": "u1mrd1fpevhm8opcbhywcmmdst7qja",
-                "token": "amctdgksyefuqxavyuttsh2pcg4ejp"
+                "user": "your-pushover-user",
+                "token": "your-pushover-token"
             },
 
             "masterSwitch": {
