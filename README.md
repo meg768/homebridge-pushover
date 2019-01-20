@@ -70,6 +70,9 @@ a message is sent using Pushover with the specified Pushover credentials.
 The **masterSwitch** will create a button that is used to toggle
 messages on or off. However, when a switch has the priority **high**, the message is always sent.
 
+I suggest you create all your messages in the config file
+and then group all messages in a seperate room named 'Messages' in HomeKit.
+
 ## Bugfixes/Updates
 
 * 2019-01-20 - Just published on NPM.
