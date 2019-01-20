@@ -6,7 +6,7 @@ module.exports = class MasterSwitch extends Accessory {
 
     constructor(platform, config) {
 
-        config = Object.assign({}, {name:'Pushover', model:'Pushover Master Switch', manufacturer:'Pushover', serialNumber:'MasterSwitch'}, config);
+        config = Object.assign({}, {name:'Pushover', model:'Pushover Master Switch', manufacturer:'homebridge-pushover', serialNumber:'MasterSwitch'}, config);
 
         super(platform, config);
 

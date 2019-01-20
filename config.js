@@ -23,18 +23,18 @@
             },
 
             "switches": [
-                {"id": "LA",   "message": "Larm aktiverat.", "priority":"high" },
-                {"id": "LV",   "message": "Larm avaktiverat.", "priority":"high" },
-                {"id": "RIB",  "message": "Rörelse i biorummet." },
-                {"id": "RPK",  "message": "Rörelse på kontoret." },
-                {"id": "RIV",  "message": "Rörelse i vardagsrummet."},
-                {"id": "RIS",  "message": "Rörelse i snickarrummet."},
-                {"id": "RIM",  "message": "Rörelse i matrummet."},
-                {"id": "TT",   "message": "Terassen tänd."},
-                {"id": "TS",   "message": "Terassen släckt."},
-                {"id": "DRPD", "message": "Det ringer på dörren.", "priority":"high"},
-                {"id": "JALH", "message": "Jag har lämnat huset.", "priority":"high"},
-                {"id": "JHKH", "message": "Jag är hemma!", "priority":"high"}
+                {"message": "Larm aktiverat", "priority":"high" },
+                {"message": "Larm avaktiverat", "priority":"high" },
+                {"message": "Rörelse i biorummet" },
+                {"message": "Rörelse på kontoret" },
+                {"message": "Rörelse i vardagsrummet"},
+                {"message": "Rörelse i snickarrummet"},
+                {"message": "Rörelse i matrummet"},
+                {"message": "Terassen tänd"},
+                {"message": "Terassen släckt"},
+                {"message": "Det ringer på dörren", "priority":"high"},
+                {"message": "Jag har lämnat huset", "priority":"high"},
+                {"message": "Jag är hemma!", "priority":"high"}
             ]
 
         }
