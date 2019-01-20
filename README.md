@@ -9,7 +9,7 @@ for more information.
 
 Then install this plugin.
 
-    $ sudo npm install homebridge-ikea-tradfri-gateway -g
+    $ sudo npm install homebridge-pushover -g
 
 ## Configuration File
 
