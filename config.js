@@ -25,8 +25,6 @@
             "switches": [
                 {"name": "Larm aktiverat", "priority":"high" },
                 {"name": "Larm avaktiverat", "priority":"high" },
-                {"name": "Rörelse i biorummet" },
-                {"name": "Rörelse på kontoret" },
                 {"name": "Rörelse i vardagsrummet"},
                 {"name": "Rörelse i snickarrummet"},
                 {"name": "Rörelse i matrummet"},
