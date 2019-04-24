@@ -32,6 +32,8 @@
                 {"name": "Rörelse i matrummet"},
                 {"name": "Terassen tänd"},
                 {"name": "Terassen släckt"},
+                {"name": "Jäskylen på"},
+                {"name": "Jäskylen av"},
                 {"name": "Det ringer på dörren", "priority":"high"},
                 {"name": "Jag har lämnat huset", "priority":"high"},
                 {"name": "Jag är hemma!", "priority":"high"}
