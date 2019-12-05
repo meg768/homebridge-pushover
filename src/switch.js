@@ -28,8 +28,8 @@ module.exports = class Switch extends Accessory {
                     characteristic.updateValue(state = true);
     
                     if (this.platform.enabled || priority == 'high') {
-                        platform.pushover(this.message).then(() => {
-                            this.log('Message sent:', this.message);
+                        platform.pushover(message).then(() => {
+                            this.log('Message sent:', message);
                         })
                         .catch((error) => {
                             this.log(error);
