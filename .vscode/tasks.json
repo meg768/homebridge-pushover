@@ -17,6 +17,11 @@
             "type": "npm",
             "script": "goto-npm",
             "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "git-commit",
+            "problemMatcher": []
         }
     ]
 }

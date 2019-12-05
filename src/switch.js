@@ -6,13 +6,11 @@ module.exports = class Switch extends Accessory {
 
     constructor(platform, config) {
 
-        config = Object.assign({}, {name:config.name, model:'Pushover Message', manufacturer:'Pushover', serialNumber:'1.0'}, config);
+        var {type, name, message, type, proirity, model = 'Pushover Message', manufacturer = 'Pushover', serialNumber = '1.0'} = config;
 
-        super(platform, config);
+        super(platform, {name:name, model:model, manufacturer:manufacturer, serialNumber:serialNumber});
 
         this.service = new this.Service.Switch(this.name);
-        this.message = this.name;
-
         var characteristic = this.service.getCharacteristic(this.Characteristic.On);
         var state = false;
 
@@ -20,31 +18,38 @@ module.exports = class Switch extends Accessory {
             callback(null, state);
         });
 
-        characteristic.on('set', (value, callback, context) => {
+        characteristic.on('set', (value, callback) => {
 
-            if (value) {
-                characteristic.updateValue(state = true);
-
-                if (this.platform.enabled || this.config.priority == 'high') {
-                    platform.pushover(this.message).then(() => {
-                        this.log('Message sent:', this.message);
-                    })
-                    .catch((error) => {
-                        this.log(error);
-                    })
-                    .then(() => {
-                        characteristic.updateValue(state = false);
-                    });
-
-                }
-                else {
-                    setTimeout(() => {
-                        characteristic.updateValue(state = false);
-                    }, 500);
-                }
-
+            if (type == 'masterSwitch') {
+                this.platform.enabled = state = Boolean(value);
             }
+            else {
+                if (value) {
+                    characteristic.updateValue(state = true);
+    
+                    if (this.platform.enabled || priority == 'high') {
+                        platform.pushover(this.message).then(() => {
+                            this.log('Message sent:', this.message);
+                        })
+                        .catch((error) => {
+                            this.log(error);
+                        })
+                        .then(() => {
+                            characteristic.updateValue(state = false);
+                        });
+    
+                    }
+                    else {
+                        setTimeout(() => {
+                            characteristic.updateValue(state = false);
+                        }, 500);
+                    }
+    
+                }
+    
 
+                
+            }
             callback();
         });
 
