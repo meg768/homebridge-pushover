@@ -6,7 +6,7 @@ module.exports = class Switch extends Accessory {
 
     constructor(platform, config) {
 
-        var {type, name, message, type, proirity, model = 'Pushover Message', manufacturer = 'Pushover', serialNumber = '1.0'} = config;
+        var {type, name, message, type, priority, model = 'Pushover Message', manufacturer = 'Pushover', serialNumber = '1.0'} = config;
 
         super(platform, {name:name, model:model, manufacturer:manufacturer, serialNumber:serialNumber});
 

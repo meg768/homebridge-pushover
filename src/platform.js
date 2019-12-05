@@ -56,14 +56,8 @@ module.exports = class Platform {
     accessories(callback) {
         var accessories = [];
 
-
         this.config.messages.forEach((item) => {
-            if (item.masterSwitch === "masterSwitch") {
-                accessories.push(new MasterSwitch(this, item));
-            }
-            else {
-                accessories.push(new Switch(this, item));
-            }
+            accessories.push(new Switch(this, item));
         });
 
         callback(accessories);
