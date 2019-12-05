@@ -8,6 +8,13 @@ module.exports = class Switch extends Accessory {
 
         var {type, name, message, type, priority, model = 'Pushover Message', manufacturer = 'Pushover', serialNumber = '1.0'} = config;
 
+        if (message == undefined) {
+            throw new Error(`Please specify a message.`);
+        }
+
+        if (name == undefined)
+            name = message;
+
         super(platform, {name:name, model:model, manufacturer:manufacturer, serialNumber:serialNumber});
 
         this.service = new this.Service.Switch(this.name);
