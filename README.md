@@ -38,23 +38,25 @@ Configure your **~/.homebridge/config.json** with the following platform.
                 "token": "your-pushover-token"
             },
 
-            "masterSwitch": {
-                "name": "Meddelande"
-            },
-
-            "switches": [
-                {"name": "Larm aktiverat", "priority":"high" },
-                {"name": "Larm avaktiverat", "priority":"high" },
-                {"name": "Rörelse i biorummet" },
-                {"name": "Rörelse på kontoret" },
-                {"name": "Rörelse i vardagsrummet"},
-                {"name": "Rörelse i snickarrummet"},
-                {"name": "Rörelse i matrummet"},
-                {"name": "Terassen tänd"},
-                {"name": "Terassen släckt"},
-                {"name": "Det ringer på dörren", "priority":"high"},
-                {"name": "Jag har lämnat huset", "priority":"high"},
-                {"name": "Jag är hemma!", "priority":"high"}
+            "messages": [
+                {
+                    "name": "Meddelande",
+                    "message": "Meddelande",
+                    "type": "masterSwitch"
+                },
+                {
+                    "name": "Larm på",
+                    "message": "Larm aktiverat"
+                },
+                {
+                    "name": "Larm av",
+                    "message": "Larm avaktiverat"
+                },
+                {
+                    "name": "Ringklocka",
+                    "message": "Det ringer på dörren",
+                    "priority": "high"
+                }
             ]
 
         }
