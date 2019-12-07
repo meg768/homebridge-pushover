@@ -31,7 +31,7 @@ Configure your **~/.homebridge/config.json** with the following platform.
     "platforms": [
         {
             "platform": "Pushover",
-            "name": "Pushover",
+            "name": "Messages",
 
             "pushover": {
                 "user": "your-pushover-user",
@@ -39,11 +39,6 @@ Configure your **~/.homebridge/config.json** with the following platform.
             },
 
             "messages": [
-                {
-                    "name": "Meddelande",
-                    "message": "Meddelande",
-                    "type": "masterSwitch"
-                },
                 {
                     "name": "Larm på",
                     "message": "Larm aktiverat"
@@ -68,9 +63,6 @@ Configure your **~/.homebridge/config.json** with the following platform.
 
 This plugin simply creates buttons with text labels. When pushed to state ON
 a message is sent using Pushover with the specified Pushover credentials.
-
-The **masterSwitch** will create a button that is used to toggle
-messages on or off. However, when a switch has the priority **high**, the message is always sent.
 
 I suggest you create all your messages in the config file
 and then group all messages in a seperate room named 'Messages' in HomeKit.
