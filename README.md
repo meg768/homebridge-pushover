@@ -69,7 +69,7 @@ and then group all messages in a seperate room named 'Messages' in HomeKit.
 
 ## Bugfixes/Updates
 
-* 2019-01-20 - Just published on NPM.
+See https://github.com/meg768/homebridge-pushover/releases
 
 ## Useful Links
 

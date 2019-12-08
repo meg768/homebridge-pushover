@@ -1,6 +1,6 @@
 {
   "name": "homebridge-pushover",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Send messages via Pushover to HomeKit",
   "main": "index.js",
   "scripts": {
