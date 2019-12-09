@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "git-commit": "git add -A && git commit -m '-' && git push",
+    "npm-publish": "npm publish",
     "goto-github": "open https://github.com/meg768/homebridge-pushover",
 		"goto-npm": "open https://www.npmjs.com/package/homebridge-pushover"
   },
