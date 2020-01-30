@@ -19,7 +19,7 @@ module.exports = class Switch extends Accessory {
 
         this.service = new this.Service.Switch(this.name);
         var characteristic = this.service.getCharacteristic(this.Characteristic.On);
-        var state = false;
+        var state = (type == 'masterSwitch') ? true : false;
 
         characteristic.on('get', (callback) => {
             callback(null, state);
