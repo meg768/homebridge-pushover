@@ -16,6 +16,8 @@
                 "token": "your-pushover-token"
             },
 
+            "masterSwitch" : true,
+
             "messages": [
                 {"message": "Meddelanden", "type":"masterSwitch"},
                 {"message": "Larm aktiverat", "priority":"high" },
