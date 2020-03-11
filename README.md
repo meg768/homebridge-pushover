@@ -38,6 +38,8 @@ Configure your **~/.homebridge/config.json** with the following platform.
                 "token": "your-pushover-token"
             },
 
+            "masterSwitch" : true,
+
             "messages": [
                 {
                     "name": "Larm på",
