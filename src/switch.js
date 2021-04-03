@@ -6,7 +6,7 @@ module.exports = class Switch extends Accessory {
 
     constructor(platform, config) {
 
-        var {type, name, message, type, title, priority, model = 'Pushover Message', manufacturer = 'Pushover', serialNumber = '1.0'} = config;
+        var {type, name, message, type, title, expire = 3600, retry = 60, priority, model = 'Pushover Message', manufacturer = 'Pushover', serialNumber = '1.0'} = config;
 
         if (message == undefined) {
             throw new Error(`Please specify a message.`);
@@ -52,7 +52,7 @@ module.exports = class Switch extends Accessory {
                     characteristic.updateValue(state = true);
     
                     if (this.platform.enabled || priority > 0) {
-                        platform.pushover({priority:priority, message:message, title:title}).then(() => {
+                        platform.pushover({priority:priority, message:message, title:title, retry:retry, expire:expire}).then(() => {
                             this.log('Message sent:', message);
                         })
                         .catch((error) => {
