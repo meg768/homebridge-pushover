@@ -6,7 +6,7 @@ module.exports = class Switch extends Accessory {
 
     constructor(platform, config) {
 
-        var {type, name, message, type, priority, model = 'Pushover Message', manufacturer = 'Pushover', serialNumber = '1.0'} = config;
+        var {type, name, pushprio, title, message, type, priority, model = 'Pushover Message', manufacturer = 'Pushover', serialNumber = '1.0'} = config;
 
         if (message == undefined) {
             throw new Error(`Please specify a message.`);
@@ -14,6 +14,18 @@ module.exports = class Switch extends Accessory {
 
         if (name == undefined)
             name = message;
+        
+        if (title == undefined)
+            title = name;
+            
+        if (pushprio == undefined)
+            pushprio = 0;
+        
+        if (pushprio > 1)
+            pushprio = 1;
+        
+        if (pushprio < -2)
+            pushprio = -2;
 
         super(platform, {name:name, model:model, manufacturer:manufacturer, serialNumber:serialNumber});
 
