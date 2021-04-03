@@ -23,7 +23,7 @@ module.exports = class Platform {
 
     }
 
-    pushover(message) {
+    pushover(message, title, pushprio) {
         return new Promise((resolve, reject) => {
             try {
                 if (!this.config.pushover)
@@ -39,7 +39,7 @@ module.exports = class Platform {
 
                 this.log('Sending message:', message);
 
-                push.send({priority:0, message:message}, (error, result) => {
+                push.send({priority:pushprio, message:message, title:title}, (error, result) => {
                     if (error)
                         reject(error);
                     else
