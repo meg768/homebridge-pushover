@@ -41,16 +41,20 @@ Configure your **~/.homebridge/config.json** with the following platform.
             "messages": [
                 {
                     "name": "Larm på",
+                    "title": "Larm!",
                     "message": "Larm aktiverat"
                 },
                 {
                     "name": "Larm av",
-                    "message": "Larm avaktiverat"
+                    "message": "Larm avaktiverat",
+                    "pushprio": -1
                 },
                 {
                     "name": "Ringklocka",
+                    "title": "Ringklocka",
                     "message": "Det ringer på dörren",
-                    "priority": "high"
+                    "priority": "high",
+                    "pushprio": 1
                 }
             ]
 
