@@ -18,8 +18,8 @@
 
             "messages": [
                 {"message": "Meddelanden", "type":"masterSwitch"},
-                {"message": "Larm aktiverat", "priority":"high" },
-                {"message": "Larm avaktiverat", "priority":"high" },
+                {"message": "Larm aktiverat", "title":"Larm", "priority":"high" },
+                {"message": "Larm avaktiverat", "title": "Larm", "priority":"high" },
                 {"message": "Rörelse i vardagsrummet"},
                 {"message": "Rörelse i snickarrummet"},
                 {"message": "Rörelse i matrummet"},

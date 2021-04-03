@@ -5,6 +5,7 @@ var Switch = require('./switch.js');
 var MasterSwitch = require('./master-switch.js');
 
 module.exports = class Platform {
+	
 	constructor(log, config, homebridge) {
 		this.config = config;
 		this.log = log;
@@ -38,11 +39,13 @@ module.exports = class Platform {
 
 				var push = new Pushover(this.config.pushover);
 
-				this.log('Sending Pushover payload:', payload);
+				this.log('Sending Pushover payload:', JSON.stringify(payload));
 
 				push.send(payload, (error, result) => {
-					if (error) reject(error);
-					else resolve();
+					if (error) 
+						reject(error);
+					else 
+						resolve();
 				});
 			} catch (error) {
 				reject(error);

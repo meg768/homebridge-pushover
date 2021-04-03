@@ -6,7 +6,7 @@ module.exports = class Switch extends Accessory {
 
     constructor(platform, config) {
 
-        var {type, name, message, type, priority, model = 'Pushover Message', manufacturer = 'Pushover', serialNumber = '1.0'} = config;
+        var {type, name, message, type, title, priority, model = 'Pushover Message', manufacturer = 'Pushover', serialNumber = '1.0'} = config;
 
         if (message == undefined) {
             throw new Error(`Please specify a message.`);
@@ -14,6 +14,23 @@ module.exports = class Switch extends Accessory {
 
         if (name == undefined)
             name = message;
+
+		// Translate priority strings to Pushover priority values
+		if (typeof priority == 'string') {
+
+			var priorities = {
+				'lowest':-2,
+				'low': -1,
+				'normal': 0,
+				'high': 1,
+				'emergency': 2 
+			};
+
+			priority = priorities[priority];
+		}
+
+		if (typeof priority != 'number')
+			priority = 0;
 
         super(platform, {name:name, model:model, manufacturer:manufacturer, serialNumber:serialNumber});
 
@@ -34,8 +51,8 @@ module.exports = class Switch extends Accessory {
                 if (value) {
                     characteristic.updateValue(state = true);
     
-                    if (this.platform.enabled || priority == 'high') {
-                        platform.pushover(message).then(() => {
+                    if (this.platform.enabled || priority > 0) {
+                        platform.pushover({priority:priority, message:message, title:title}).then(() => {
                             this.log('Message sent:', message);
                         })
                         .catch((error) => {
